@@ -1,0 +1,16 @@
+language: go
+
+go:
+  - 1.x
+  - 1.8
+  - master
+
+services:
+  - go-openid
+
+install:
+  - go get -v github.com/julienschmidt/httprouter
+
+
+script:
+  - go test -v ./...
